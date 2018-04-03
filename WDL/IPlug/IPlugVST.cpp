@@ -344,7 +344,7 @@ VstIntPtr VSTCALLBACK IPlugVST::VSTDispatcher(AEffect *pEffect, VstInt32 opCode,
     return 0;
   }
 
-  Trace(TRACELOC, "%d(%s):%d:%d", opCode, VSTOpcodeStr(opCode), idx, (int) value);
+  //Trace(TRACELOC, "%d(%s):%d:%d", opCode, VSTOpcodeStr(opCode), idx, (int) value);
 
   switch (opCode)
   {
