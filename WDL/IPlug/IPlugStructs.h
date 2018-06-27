@@ -220,17 +220,17 @@ struct IRECT
   inline IRECT SubRectVertical(int numSlices, int sliceIdx)
   {
     float heightOfSubRect = (float(H()) / numSlices);
-    int t = heightOfSubRect * sliceIdx;
+    float t = heightOfSubRect * (float)sliceIdx;
 
-    return IRECT(L, T + t, R, T + t + heightOfSubRect);
+    return IRECT(L, T + (int)t, R, T + (int)t + (int)heightOfSubRect);
   }
 
   inline IRECT SubRectHorizontal(int numSlices, int sliceIdx)
   {
     float widthOfSubRect = (float(W()) / numSlices);
-    int l = widthOfSubRect * sliceIdx;
+    float l = widthOfSubRect * (float)sliceIdx;
 
-    return IRECT(L + l, T, L + l + widthOfSubRect, B);
+    return IRECT(L + (int)l, T, L + (int)l + (int)widthOfSubRect, B);
   }
   
   inline IRECT GetPadded(int padding)
